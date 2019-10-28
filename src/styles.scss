@@ -1,0 +1,85 @@
+/* remove the top and left whitespace */
+* {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: contain;
+}
+
+html,
+body {
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  font-style: normal;
+  white-space: nowrap;
+  z-index: -1;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  touch-action: none;
+  pointer-events: none;
+}
+
+#App {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overscroll-behavior-y: none;
+}
+
+canvas {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  /* Disable scroll bars */
+  display: block;
+  overscroll-behavior: contain;
+}
+
+.wrapper {
+  /* Making the wrapper stack above the body */
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  overscroll-behavior: contain;
+}
+.inner-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overscroll-behavior: contain;
+}
+.black-box {
+  background: black;
+  box-sizing: border-box;
+  height: 2vh;
+  width: 50%;
+  margin: 1vw auto;
+  right: 0;
+  left: 0;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1em;
+}
